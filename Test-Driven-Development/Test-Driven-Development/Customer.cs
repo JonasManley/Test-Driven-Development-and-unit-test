@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_Driven_Development
 {
-    class Customer
+    public class Customer
     {
         private string cpr;
         private string name;

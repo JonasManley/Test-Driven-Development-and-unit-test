@@ -4,3 +4,10 @@ C:\Users\Jonas\Desktop\Test-Driven-Development\Test-Driven-Development\bin\Debug
 C:\Users\Jonas\Desktop\Test-Driven-Development\Test-Driven-Development\obj\Debug\Test-Driven-Development.csprojAssemblyReference.cache
 C:\Users\Jonas\Desktop\Test-Driven-Development\Test-Driven-Development\obj\Debug\Test-Driven-Development.exe
 C:\Users\Jonas\Desktop\Test-Driven-Development\Test-Driven-Development\obj\Debug\Test-Driven-Development.pdb
+C:\Users\Jonas\Documents\GitHub\Test-Driven-Development-and-unit-test\Test-Driven-Development\Test-Driven-Development\bin\Debug\Test-Driven-Development.exe.config
+C:\Users\Jonas\Documents\GitHub\Test-Driven-Development-and-unit-test\Test-Driven-Development\Test-Driven-Development\bin\Debug\Test-Driven-Development.exe
+C:\Users\Jonas\Documents\GitHub\Test-Driven-Development-and-unit-test\Test-Driven-Development\Test-Driven-Development\bin\Debug\Test-Driven-Development.pdb
+C:\Users\Jonas\Documents\GitHub\Test-Driven-Development-and-unit-test\Test-Driven-Development\Test-Driven-Development\obj\Debug\Test-Driven-Development.exe
+C:\Users\Jonas\Documents\GitHub\Test-Driven-Development-and-unit-test\Test-Driven-Development\Test-Driven-Development\obj\Debug\Test-Driven-Development.pdb
+C:\Users\Jonas\Documents\GitHub\Test-Driven-Development-and-unit-test\Test-Driven-Development\Test-Driven-Development\bin\Debug\Test-Driven-Development.exe.CodeAnalysisLog.xml
+C:\Users\Jonas\Documents\GitHub\Test-Driven-Development-and-unit-test\Test-Driven-Development\Test-Driven-Development\bin\Debug\Test-Driven-Development.exe.lastcodeanalysissucceeded

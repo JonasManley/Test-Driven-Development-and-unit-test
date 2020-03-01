@@ -13,8 +13,10 @@ namespace Test_project
         public void TransferAmountBewteenAccounts_500kr_Successful()
         {
             //Arrange
-            Account JonasAccount = new Account(1, 1000);
-            Account ChristofferAccount = new Account(2, 2000);
+            Customer customerJonas = new Customer("2206921111", "Jonas pedersen");
+            Customer customerChristoffer = new Customer("2206921111", "Christoffer dunk");
+            Account JonasAccount = new Account(1, customerJonas, 1000);
+            Account ChristofferAccount = new Account(2, customerChristoffer, 2000);
             int TransferAmount = 500;
             double ChristofferStatingBalance = ChristofferAccount.getBalance();
 
@@ -30,16 +32,50 @@ namespace Test_project
         public void TransferNegativeAmountBewteenAccounts_Minus500kr_ExecptionThrown()
         {
             //Arrange 
-            Account JonasAccount = new Account(1, 1000);
-            Account ChristofferAccount = new Account(2, 2000);
+            Customer customerJonas = new Customer("2206921111", "Jonas pedersen");
+            Customer customerChristoffer = new Customer("2206921111", "Christoffer dunk");
+            Account JonasAccount = new Account(1, customerJonas, 1000);
+            Account ChristofferAccount = new Account(2, customerChristoffer, 2000);
+
             int TransferAmount = -500;
             double ChristofferStatingBalance = ChristofferAccount.getBalance();
+
+            //DateTime dateTime = DateTime.Now;
+            //Movement movement = new Movement(TransferAmount, dateTime);
 
             //Act 
             JonasAccount.Transfer(TransferAmount, ChristofferAccount);
 
             //Assert
-           
+
+        }
+
+        [TestMethod]
+        public void CreateAccountWith0Balance_Successful()
+        {
+            //Arrange
+            Customer customerJonas = new Customer("2206921111", "Jonas pedersen");
+            Account JonasAccount = new Account(1, customerJonas, 1000);
+            int TransferAmount = 0;
+
+            //Act
+
+            //Assert
+            Assert.AreEqual(0, JonasAccount.getBalance());
+        }
+
+
+        public void CheckBalance_1000kr_Successful()
+        {
+            //Arrange
+            Customer customerJonas = new Customer("2206921111", "Jonas pedersen");
+            Account JonasAccount = new Account(1, customerJonas, 1000);
+
+            //Act 
+            double currentBalance = JonasAccount.getBalance();
+
+            //Assert
+            Assert.AreEqual(1000, currentBalance);
         }
     }
 }

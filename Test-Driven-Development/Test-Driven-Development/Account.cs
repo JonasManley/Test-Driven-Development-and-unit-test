@@ -14,10 +14,11 @@ namespace Test_Driven_Development
         private Bank bank;
 
 
-        public Account(int number, double money)
+        public Account(int number, Customer customer, double money)
         {
             this.number = number;
             this.money = money;
+            this.customer = customer;
         }
 
         public int Number
