@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using Test_Driven_Development;
 
 namespace Test_project
@@ -9,6 +10,9 @@ namespace Test_project
     {
         // Naming convention used in the project:
         // [the name of the tested method]_[expected input / tested state]_[expected behavior].
+        // Mock objects:  Mock<Customer> customerJonas = new Mock<Customer>();
+
+
         [TestMethod]
         public void TransferAmountBewteenAccounts_500kr_Successful()
         {
@@ -26,6 +30,26 @@ namespace Test_project
             //Assert
             Assert.AreEqual(TransferAmount + ChristofferStatingBalance, ChristofferAccount.getBalance());
         }
+       
+
+        [TestMethod]
+        public void TransferAmountBewteenAccounts_500kr_Successful_Mock()
+        {
+            //Arrange
+            Customer customerJonas = new Customer("2206921111", "Jonas pedersen");
+            Customer customerChristoffer = new Customer("2206921111", "Christoffer dunk");
+            Account JonasAccount = new Account(1, customerJonas, 1000);
+            Account ChristofferAccount = new Account(2, customerChristoffer, 2000);
+            int TransferAmount = 500;
+            double ChristofferStatingBalance = ChristofferAccount.getBalance();
+
+            //Act 
+            JonasAccount.Transfer(TransferAmount, ChristofferAccount);
+
+            //Assert
+            Assert.AreEqual(TransferAmount + ChristofferStatingBalance, ChristofferAccount.getBalance());
+        }
+
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException), "Amount is negative")]
