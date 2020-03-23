@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_Driven_Development
 {
-    class Bank
+    class Bank : 
     {
         private string cvr;
         private string name;
@@ -20,12 +20,12 @@ namespace Test_Driven_Development
             this.name = name;
         }
 
-        private List<Account> GetAccounts()
+        public List<Account> GetAccounts()
         {
             return accounts;
         }
 
-        private Account GetAccount(int id)
+        public Account GetAccount(int id)
         {
             foreach (var item in accounts)
             {
